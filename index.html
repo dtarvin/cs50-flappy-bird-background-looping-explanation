@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Scrolling Demo</title>
+    <style>
+        img {
+            width: 578.5px;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%);
+            padding: 5px;
+            animation: looping 5s linear infinite;
+        }
+        div {
+            border: 5px solid red;
+            width: 256px;
+            height: 144px;
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translateY(-50%);
+            background: transparent;
+            z-index: 2;
+        }
+        @keyframes looping {
+            0% {
+                left: 50%
+            }
+            100% {
+                left: calc(50% + -206.5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="./background.png" alt="background">
+    <div class="frame"></div>
+</body>
+</html>
